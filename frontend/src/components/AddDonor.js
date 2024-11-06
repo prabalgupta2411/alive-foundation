@@ -22,7 +22,7 @@ const AddDonor = () => {
         emailId,
         panNo,
       };
-      await axios.post(`${process.env.REACT_APP_API_URL}/api/donors/add`, newDonor);  // Make the API request to add the donor
+      await axios.post(`${process.env.REACT_APP_API}/api/donors/add`, newDonor);  // Make the API request to add the donor
       setSuccess('Donor added successfully!');
       setError(null);
 
