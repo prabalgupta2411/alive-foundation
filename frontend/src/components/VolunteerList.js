@@ -29,7 +29,7 @@ const VolunteerList = () => {
   const handleDeleteVolunteer = async (id) => {
     if (window.confirm('Are you sure you want to delete this volunteer?')) {
       try {
-        await axios.delete(`${process.env.REACT_APP_API}/api/volunteers/delete/${id}`);
+        await axios.delete(`${process.env.REACT_APP_API}/api/volunteers/${id}`);
         setVolunteers(volunteers.filter((vol) => vol._id !== id)); // Update state after deletion
       } catch (error) {
         alert('Error deleting volunteer');

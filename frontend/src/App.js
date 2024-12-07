@@ -25,6 +25,7 @@ import TermsOfUse from "./pages/TermsOfUse";
 import DonatePage from "./pages/DonatePage";
 import ScrollToTopBtn from "./components/ScrollToTopBtn";
 import ScrollToTop from "./components/ScrollTop";
+import BecomeVolunteer from "./pages/BecomeVolunteer";
 const App = () => {
   return (
     <AuthProvider>
@@ -53,6 +54,7 @@ const App = () => {
             <Route path="/refund-cancellation-policy" element={<RefundCancellationPolicy />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-use" element={<TermsOfUse />} />
+            <Route path="/become-volunteer" element={<BecomeVolunteer />} />
 
             <Route
               path="/admin/addPatient"

@@ -31,11 +31,13 @@ const ResponsiveCarousel = ({ images }) => {
         {images.map((image, index) => (
           <div
             key={index}
-            className={`absolute top-0 left-0 w-full h-full bg-fixed bg-cover bg-center transition-opacity duration-700 ${
+            className={`absolute top-0 left-0 w-full h-full transition-opacity duration-700 ${
               currentIndex === index ? "opacity-100" : "opacity-0"
             }`}
             style={{
               backgroundImage: `url(${image.src})`,
+              backgroundSize: "cover",  // Ensures the image covers the container
+              backgroundPosition: "center",  // Centers the image within the container
             }}
           ></div>
         ))}

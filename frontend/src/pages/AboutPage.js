@@ -2,6 +2,7 @@ import React from 'react'
 import About from '../components/About'
 import FullScreenImage from '../components/FullScreenImage'
 import { Helmet } from 'react-helmet'
+import Section from '../components/HomePageComp/Section'
 
 export default function AboutPage() {
   return (
@@ -30,6 +31,7 @@ export default function AboutPage() {
         imageSrc="./assets/cp5.jpg"
         text="About Us"
         />
+        <Section/>
         <About/>
     </div>
   )

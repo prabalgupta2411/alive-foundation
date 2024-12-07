@@ -1,23 +1,30 @@
 .marquee-container {
   position: relative;
-  width: 80%; // Adjust the width of the marquee area
+  width: 100%; /* Full width */
   max-width: 900px;
   margin: 0 auto;
-  overflow: hidden; // Hide overflowing content
+  overflow: hidden; /* Hide overflowing content */
 }
 
 .marquee {
   display: flex;
-  animation: scroll 5s linear infinite; // Adjust speed as needed
+  animation: scroll 15s linear infinite; /* Adjust speed for better readability */
+  gap: 16px; /* Space between items */
 }
 
 .marquee-item {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: start;
   gap: 1rem;
-  padding: 0 1rem;
-  min-width: 250px; // Ensure each item takes space
+  padding: 1rem;
+  min-width: 250px; /* Ensure each item has a minimum width */
+  max-width: 100%; /* Allow items to shrink appropriately */
+  box-sizing: border-box; /* Prevent padding from affecting size */
+  white-space: normal; /* Allow text wrapping */
+  overflow: hidden; /* Prevent overflowing content */
+  text-overflow: ellipsis; /* Add ellipsis for truncated text */
 }
 
 .item-image {
@@ -25,17 +32,25 @@
   height: 50px;
   border-radius: 50%;
   object-fit: cover;
+  flex-shrink: 0; /* Ensure the image doesn't shrink */
 }
 
-.item-text h3 {
-  font-size: 1rem;
-  color: #333;
-  margin: 0;
-}
+.item-text {
+  h3 {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+    white-space: nowrap; /* Prevent wrapping if needed */
+    text-overflow: ellipsis;
+    overflow: hidden; /* Prevent text from spilling */
+  }
 
-.item-text p {
-  font-size: 0.875rem;
-  color: #666;
+  p {
+    font-size: 0.875rem;
+    color: #666;
+    margin: 0;
+    overflow-wrap: break-word; /* Break long words */
+  }
 }
 
 @keyframes scroll {
@@ -43,7 +58,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%); // Move by half the total content width
+    transform: translateX(-100%); /* Loop through all items */
   }
 }
 
@@ -54,7 +69,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 50px; // Adjust fade width
+  width: 50px;
   z-index: 1;
   pointer-events: none;
 }

@@ -6,8 +6,12 @@ const Marquee = ({ reviews }) => {
     <div className="w-full">
       {/* Heading */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">What Our Clients Say</h2>
-        <p className="text-gray-600 mt-2">Read testimonials from our valued customers</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+          What Our Clients Say
+        </h2>
+        <p className="text-gray-600 mt-2">
+          Read testimonials from our valued customers
+        </p>
       </div>
 
       {/* Marquee container */}
@@ -18,7 +22,7 @@ const Marquee = ({ reviews }) => {
           {[...reviews, ...reviews].map((review, index) => (
             <div
               key={index}
-              className="marquee-item flex items-center bg-white shadow-md rounded-lg p-4 min-w-[300px] md:min-w-[400px] space-x-4 mx-14"
+              className="marquee-item flex items-center bg-white shadow-md rounded-lg p-4 min-w-[300px] md:min-w-[400px] space-x-4 mx-11"
             >
               {/* Image */}
               <div className="flex-shrink-0">

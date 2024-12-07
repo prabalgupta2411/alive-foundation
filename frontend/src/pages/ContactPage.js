@@ -6,7 +6,7 @@ function ContactPage() {
   return (
     <div>
         <FullScreenImage
-        imageSrc="./assets/cp11.png"
+        imageSrc="./assets/cp11.jpg"
         text=""
         />
         <Contact/>
