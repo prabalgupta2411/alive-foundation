@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ResponsiveCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Automatically advance slides
+  // To handle automatic slide changes
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
@@ -12,17 +12,34 @@ const ResponsiveCarousel = ({ images }) => {
     return () => clearInterval(interval);
   }, [currentIndex]);
 
+  // To go to the previous slide
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
 
+  // To go to the next slide
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
+
+  // Add parallax effect based on scroll position
+  const handleScroll = () => {
+    const parallaxElements = document.querySelectorAll(".parallax");
+    parallaxElements.forEach((element) => {
+      const speed = element.getAttribute("data-speed");
+      const offset = window.scrollY * speed;
+      element.style.transform = `translateY(${offset}px)`;
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="relative w-full h-[70vh] md:h-[90vh] overflow-hidden">
@@ -36,10 +53,21 @@ const ResponsiveCarousel = ({ images }) => {
             }`}
             style={{
               backgroundImage: `url(${image.src})`,
-              backgroundSize: "cover",  // Ensures the image covers the container
-              backgroundPosition: "center",  // Centers the image within the container
+              backgroundSize: "cover", // Ensures the image covers the container
+              backgroundPosition: "center",
             }}
-          ></div>
+          >
+            <div
+              className="parallax"
+              data-speed={0.3} // Adjust the speed of the parallax effect
+              style={{
+                backgroundImage: `url(${image.src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                height: "100%",
+              }}
+            ></div>
+          </div>
         ))}
       </div>
 
