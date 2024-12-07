@@ -1,0 +1,70 @@
+.marquee-container {
+  position: relative;
+  width: 80%; // Adjust the width of the marquee area
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden; // Hide overflowing content
+}
+
+.marquee {
+  display: flex;
+  animation: scroll 5s linear infinite; // Adjust speed as needed
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  padding: 0 1rem;
+  min-width: 250px; // Ensure each item takes space
+}
+
+.item-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.item-text h3 {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.item-text p {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); // Move by half the total content width
+  }
+}
+
+/* Fade Effect */
+.marquee-container::before,
+.marquee-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px; // Adjust fade width
+  z-index: 1;
+  pointer-events: none;
+}
+
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}

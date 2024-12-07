@@ -46,7 +46,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-md p-3 md:p-4 flex justify-between items-center relative">
+    <nav className="bg-white border-b-2 p-3 md:p-4 flex justify-between items-center relative">
       <div className="flex items-center space-x-2">
         <img src="/favicon.png" alt="NGO Logo" className="w-10 h-10" />
         <Link to="/" className="text-xl font-semibold text-gray-800">Alive Foundation</Link>

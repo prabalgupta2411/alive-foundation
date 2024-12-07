@@ -24,7 +24,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
 import DonatePage from "./pages/DonatePage";
 import ScrollToTopBtn from "./components/ScrollToTopBtn";
-import TestConnection from "./components/TestConnection";
+import ScrollToTop from "./components/ScrollTop";
 const App = () => {
   return (
     <AuthProvider>
@@ -41,7 +41,7 @@ const App = () => {
         <link rel="canonical" href="https://www.alivefoundation.in/" />
       </Helmet>
       <Router>
-        <TestConnection />
+        <ScrollToTop />
         <Header />
         <div>
           <Routes>
