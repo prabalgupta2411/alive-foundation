@@ -1,6 +1,7 @@
 import React from 'react'
 import CaseGrid from '../components/CaseGrid'
 import FullScreenImage from '../components/FullScreenImage'
+import Section from '../components/HomePageComp/Section'
 
 function CasePage() {
   return (
@@ -10,6 +11,7 @@ function CasePage() {
         text="Live Cases"
         />
         <CaseGrid/>
+        <Section/>
     </div>
   )
 }

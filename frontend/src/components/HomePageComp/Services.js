@@ -22,19 +22,17 @@ const ServicesSection = () => {
         </svg>
       </span>
       <h1 className="text-gray-800 text-4xl md:text-5xl xl:text-6xl font-semibold max-w-3xl mx-auto mb-16 leading-snug">
-        Services Built Specifically for your Business
+        Services We Provide to Support Life
       </h1>
       <div className="grid-offer text-left grid sm:grid-cols-2 md:grid-cols-2 gap-5 max-w-5xl mx-auto">
         <div className="card bg-white p-10 relative shadow-lg">
           <div className="circle"></div>
           <div className="relative lg:pr-52">
             <h2 className="capitalize text-gray-800 mb-4 text-2xl xl:text-3xl">
-              uI/uX <br /> creative design
+              Health & <br /> Medical Assistance
             </h2>
             <p className="text-gray-600">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              Pellentesque habitant morbi tristique senectus et netus et malesuada
-              fames.
+              We provide health and medical support to underprivileged individuals and families in need. Our services include free check-ups, consultations, and medical treatments.
             </p>
           </div>
           <div className="icon"></div>
@@ -43,12 +41,10 @@ const ServicesSection = () => {
           <div className="circle"></div>
           <div className="relative lg:pl-48">
             <h2 className="capitalize text-gray-800 mb-4 text-2xl xl:text-3xl">
-              visual <br /> graphic design
+              Education & <br /> Scholarships
             </h2>
             <p className="text-gray-600">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              Pellentesque habitant morbi tristique senectus et netus et malesuada
-              fames.
+              We offer educational support to children and youth in need, including scholarships, school supplies, and access to learning resources.
             </p>
           </div>
         </div>
@@ -56,12 +52,10 @@ const ServicesSection = () => {
           <div className="circle"></div>
           <div className="relative lg:pr-44">
             <h2 className="capitalize text-gray-800 mb-4 text-2xl xl:text-3xl">
-              strategy & <br /> digital marketing
+              Food & <br /> Nutrition Assistance
             </h2>
             <p className="text-gray-600">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              Pellentesque habitant morbi tristique senectus et netus et malesuada
-              fames.
+              We provide food and nutrition assistance to families and communities in need, ensuring that they have access to essential food items for survival.
             </p>
           </div>
         </div>
@@ -69,13 +63,10 @@ const ServicesSection = () => {
           <div className="circle"></div>
           <div className="relative lg:pl-48">
             <h2 className="capitalize text-gray-800 mb-4 text-2xl xl:text-3xl">
-              effective
-              <br /> business growth
+              Volunteer <br /> Opportunities
             </h2>
             <p className="text-gray-600">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              Pellentesque habitant morbi tristique senectus et netus et malesuada
-              fames.
+              We engage individuals in meaningful volunteer opportunities, allowing them to contribute to our mission and help those in need through various initiatives.
             </p>
           </div>
         </div>

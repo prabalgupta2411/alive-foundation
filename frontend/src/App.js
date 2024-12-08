@@ -17,7 +17,7 @@ import HomePage from "./pages/HomePage";
 import Header from "./components/Header";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
-import CaseGrid from "./pages/CasePage";
+import CasePage from "./pages/CasePage";
 import AdminRegister from "./components/AdminRegister";
 import RefundCancellationPolicy from "./pages/RefundCancellationPolicy";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -26,6 +26,7 @@ import DonatePage from "./pages/DonatePage";
 import ScrollToTopBtn from "./components/ScrollToTopBtn";
 import ScrollToTop from "./components/ScrollTop";
 import BecomeVolunteer from "./pages/BecomeVolunteer";
+import DocsPage from "./pages/DocsPage";
 const App = () => {
   return (
     <AuthProvider>
@@ -46,7 +47,7 @@ const App = () => {
         <Header />
         <div>
           <Routes>
-            <Route path="/support-life" element={<CaseGrid />} />
+            <Route path="/support-life" element={<CasePage />} />
             <Route path="/donateNow" element={<DonatePage />} />
             <Route path="/" element={<HomePage />} />
             <Route path="/contact-us" element={<ContactPage />} />
@@ -55,6 +56,7 @@ const App = () => {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-use" element={<TermsOfUse />} />
             <Route path="/become-volunteer" element={<BecomeVolunteer />} />
+            <Route path="/about-us/certificates" element={<DocsPage />} />
 
             <Route
               path="/admin/addPatient"

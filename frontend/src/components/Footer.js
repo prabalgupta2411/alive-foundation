@@ -69,7 +69,7 @@ const Footer = () => {
               <NavLink link="/" label="Home" />
               <NavLink link="/about-us" label="About Us" />
               <NavLink link="/donateNow" label="Donate" />
-              <NavLink link="/#" label="Join As Volunteer" />
+              <NavLink link="/become-volunteer" label="Join As Volunteer" />
               <NavLink link="/#" label="Photo Gallery" />
             </LinkGroup>
 

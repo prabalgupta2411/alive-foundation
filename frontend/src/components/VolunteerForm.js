@@ -21,19 +21,18 @@ const VolunteerForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission (e.g., send data to API or log it)
     console.log("Form submitted:", formData);
   };
 
   return (
-    <div className="container mx-auto p-6 bg-light-gray rounded-lg shadow-lg">
-      <h2 className="text-3xl font-bold text-center text-dark-blue mb-6">
+    <div className="max-w-3xl mx-auto p-4 sm:p-6 md:p-8 bg-light-gray rounded-lg shadow-lg">
+      <h2 className="text-2xl sm:text-3xl font-bold text-center text-dark-blue mb-6">
         Become a Volunteer
       </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Name */}
         <div className="flex flex-col">
-          <label htmlFor="name" className="text-lg text-dark-blue">
+          <label htmlFor="name" className="text-base sm:text-lg text-dark-blue">
             Your Name*
           </label>
           <input
@@ -42,14 +41,14 @@ const VolunteerForm = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="p-3 border border-gray-300 rounded-lg"
+            className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
             required
           />
         </div>
 
         {/* Email */}
         <div className="flex flex-col">
-          <label htmlFor="email" className="text-lg text-dark-blue">
+          <label htmlFor="email" className="text-base sm:text-lg text-dark-blue">
             Email*
           </label>
           <input
@@ -58,14 +57,14 @@ const VolunteerForm = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="p-3 border border-gray-300 rounded-lg"
+            className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
             required
           />
         </div>
 
         {/* Phone Number */}
         <div className="flex flex-col">
-          <label htmlFor="phone" className="text-lg text-dark-blue">
+          <label htmlFor="phone" className="text-base sm:text-lg text-dark-blue">
             Phone Number*
           </label>
           <input
@@ -74,14 +73,14 @@ const VolunteerForm = () => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="p-3 border border-gray-300 rounded-lg"
+            className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
             required
           />
         </div>
 
         {/* City */}
         <div className="flex flex-col">
-          <label htmlFor="city" className="text-lg text-dark-blue">
+          <label htmlFor="city" className="text-base sm:text-lg text-dark-blue">
             Your City*
           </label>
           <input
@@ -90,50 +89,55 @@ const VolunteerForm = () => {
             name="city"
             value={formData.city}
             onChange={handleChange}
-            className="p-3 border border-gray-300 rounded-lg"
+            className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
             required
           />
         </div>
 
         {/* Date of Birth */}
-        <div className="flex flex-col">
-          <label htmlFor="dob" className="text-lg text-dark-blue">
-            Date of Birth*
-          </label>
-          <input
-            type="date"
-            id="dob"
-            name="dob"
-            value={formData.dob}
-            onChange={handleChange}
-            className="p-3 border border-gray-300 rounded-lg"
-            required
-          />
-        </div>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex-1">
+            <label htmlFor="dob" className="text-base sm:text-lg text-dark-blue">
+              Date of Birth*
+            </label>
+            <input
+              type="date"
+              id="dob"
+              name="dob"
+              value={formData.dob}
+              onChange={handleChange}
+              className="p-3 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+              required
+            />
+          </div>
 
-        {/* Gender */}
-        <div className="flex flex-col">
-          <label htmlFor="gender" className="text-lg text-dark-blue">
-            Gender*
-          </label>
-          <select
-            id="gender"
-            name="gender"
-            value={formData.gender}
-            onChange={handleChange}
-            className="p-3 border border-gray-300 rounded-lg"
-            required
-          >
-            <option value="">Select Gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Other">Other</option>
-          </select>
+          {/* Gender */}
+          <div className="flex-1">
+            <label
+              htmlFor="gender"
+              className="text-base sm:text-lg text-dark-blue"
+            >
+              Gender*
+            </label>
+            <select
+              id="gender"
+              name="gender"
+              value={formData.gender}
+              onChange={handleChange}
+              className="p-3 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+              required
+            >
+              <option value="">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
         </div>
 
         {/* Reason to Join Us */}
         <div className="flex flex-col">
-          <label htmlFor="reason" className="text-lg text-dark-blue">
+          <label htmlFor="reason" className="text-base sm:text-lg text-dark-blue">
             Reason to Join Us*
           </label>
           <textarea
@@ -141,7 +145,7 @@ const VolunteerForm = () => {
             name="reason"
             value={formData.reason}
             onChange={handleChange}
-            className="p-3 border border-gray-300 rounded-lg"
+            className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
             required
           ></textarea>
         </div>
@@ -150,7 +154,7 @@ const VolunteerForm = () => {
         <div className="flex justify-center">
           <button
             type="submit"
-            className="bg-orange-500 hover:bg-orange-600 text-white text-lg py-3 px-6 rounded-lg font-semibold"
+            className="bg-orange-500 hover:bg-orange-600 text-white text-base sm:text-lg py-3 px-6 rounded-lg font-semibold transition-transform transform hover:scale-105"
           >
             Submit
           </button>
