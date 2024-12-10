@@ -39,10 +39,9 @@ router.post('/donate', async (req, res) => {
 
     await newTransaction.save(); // Save the transaction
 
-    res.status(201).json({ message: 'Transaction created successfully', transaction: newTransaction });
-  } catch (error) {
+    res.status(201).json({ success: true, message: 'Transaction created successfully', transaction: newTransaction });  } catch (error) {
     console.error('Error creating transaction or donor:', error);
-    res.status(500).json({ message: 'Error creating transaction or donor', error });
+    res.status(500).json({ success: false, message: 'Error creating transaction or donor', error: error.message });
   }
 });
 

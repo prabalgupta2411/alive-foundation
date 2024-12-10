@@ -27,6 +27,7 @@ import ScrollToTopBtn from "./components/ScrollToTopBtn";
 import ScrollToTop from "./components/ScrollTop";
 import BecomeVolunteer from "./pages/BecomeVolunteer";
 import DocsPage from "./pages/DocsPage";
+import DocumentViewer from "./components/DocumentViewer";
 const App = () => {
   return (
     <AuthProvider>
@@ -57,6 +58,8 @@ const App = () => {
             <Route path="/terms-of-use" element={<TermsOfUse />} />
             <Route path="/become-volunteer" element={<BecomeVolunteer />} />
             <Route path="/about-us/certificates" element={<DocsPage />} />
+            <Route path="/save-tax/12A" element={<DocumentViewer  type="pdf" url="/documents/12A.pdf" title="12A"/>} />
+            <Route path="/save-tax/80G" element={<DocumentViewer  type="pdf" url="/documents/80G.pdf" title="80G"/>} />
 
             <Route
               path="/admin/addPatient"

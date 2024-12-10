@@ -29,8 +29,58 @@ const DonateForm = () => {
     fetchPatients();
   }, []);
 
+  const handlePayment = async (order) => {
+    const options = {
+      key: process.env.REACT_APP_RAZORPAY_KEY_ID,
+      amount: order.amount,
+      currency: "INR",
+      name: "Alive Foundation",
+      description: "Donation Payment",
+      order_id: order.id,
+      handler: async (response) => {
+        try {
+          // Verify payment on the backend
+          const verifyResponse = await axios.post(`${process.env.REACT_APP_API}/api/payments/verify-payment`, {
+            paymentId: response.razorpay_payment_id,
+            razorpayOrderId: response.razorpay_order_id,
+            razorpaySignature: response.razorpay_signature,
+          });
+          setDonorName('');
+            setPhone('');
+            setEmail('');
+            setPan('');
+            setPatientName('');
+            setVolunteerName('');
+            setNote('');
+            setAmount('');
+          alert('Payment successful! Thank you for your donation.');
+        } catch (error) {
+          console.error('Payment verification failed:', error);
+          alert('Payment failed. Please try again.');
+        }
+      },
+      prefill: {
+        name: donorName,
+        email: email,
+        contact: phone,
+      },
+      notes: {
+        patientName,
+        volunteerName,
+        note,
+      },
+      theme: {
+        color: "#F37254",
+      },
+    };
+
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+  
     const donationData = {
       donorName,
       phone,
@@ -41,26 +91,31 @@ const DonateForm = () => {
       note,
       amount,
     };
-
+  
     try {
-      await axios.post(`${process.env.REACT_APP_API}/api/transactions/donate`, donationData);
-      alert('Donation submitted successfully!');
-      // Clear form fields after submission
-      setDonorName('');
-      setPhone('');
-      setEmail('');
-      setPan('');
-      setPatientName('');
-      setVolunteerName('');
-      setNote('');
-      setAmount('');
+      console.log('Calling /api/transactions/donate...');
+      const transactionResponse = await axios.post(`${process.env.REACT_APP_API}/api/transactions/donate`, donationData);
+      console.log('Transaction API Response:', transactionResponse.data);
+    
+      if (transactionResponse.data.success) {
+        console.log('Calling /api/payments/create-order...');
+        const orderResponse = await axios.post(`${process.env.REACT_APP_API}/api/payments/create-order`, donationData);
+        console.log('Order API Response:', orderResponse.data);
+    
+        await handlePayment(orderResponse.data.order);
+      } else {
+        throw new Error('Failed to save donation details.');
+      }
     } catch (error) {
-      console.error('Error submitting donation:', error);
+      console.error('Error during donation or payment:', error.response?.data || error.message);
+      alert('Error processing your request. Please try again.');
     }
+    
   };
+  
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-6 space-y-6 bg-white shadow-lg rounded-lg text-black">
+    <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-6 space-y-6 bg-white shadow-lg rounded-lg text-black flex flex-col justify-between">
       <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Donation Form</h2>
 
       <div className="space-y-2">
@@ -111,38 +166,41 @@ const DonateForm = () => {
         />
       </div>
 
-      <div className="space-y-2">
-        <label htmlFor="patientName" className="text-sm font-semibold text-gray-600">Select Patient</label>
-        <select
-          id="patientName"
-          value={patientName}
-          onChange={(e) => setPatientName(e.target.value)}
-          className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-          <option value="">Select Patient</option>
-          {patients.map((patient) => (
-            <option key={patient._id} value={patient.name}>
-              {patient.name}
-            </option>
-          ))}
-        </select>
-      </div>
+      {/* Flexbox for Select Patient and Select Volunteer */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="space-y-2">
+          <label htmlFor="patientName" className="text-sm font-semibold text-gray-600">Select Patient</label>
+          <select
+            id="patientName"
+            value={patientName}
+            onChange={(e) => setPatientName(e.target.value)}
+            className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="">Select Patient</option>
+            {patients.map((patient) => (
+              <option key={patient._id} value={patient.name}>
+                {patient.name}
+              </option>
+            ))}
+          </select>
+        </div>
 
-      <div className="space-y-2">
-        <label htmlFor="volunteerName" className="text-sm font-semibold text-gray-600">Select Volunteer</label>
-        <select
-          id="volunteerName"
-          value={volunteerName}
-          onChange={(e) => setVolunteerName(e.target.value)}
-          className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-          <option value="">Select Volunteer</option>
-          {volunteers.map((volunteer) => (
-            <option key={volunteer._id} value={volunteer.name}>
-              {volunteer.name}
-            </option>
-          ))}
-        </select>
+        <div className="space-y-2">
+          <label htmlFor="volunteerName" className="text-sm font-semibold text-gray-600">Select Volunteer</label>
+          <select
+            id="volunteerName"
+            value={volunteerName}
+            onChange={(e) => setVolunteerName(e.target.value)}
+            className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="">Select Volunteer</option>
+            {volunteers.map((volunteer) => (
+              <option key={volunteer._id} value={volunteer.name}>
+                {volunteer.name}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       <div className="space-y-2">

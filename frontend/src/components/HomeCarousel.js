@@ -78,7 +78,7 @@ const ResponsiveCarousel = ({ images }) => {
           Lighting the Path to Hope and Happiness
         </p>
         <Link
-          to="/donate"
+          to="/donateNow"
           className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold text-lg transition"
         >
           Donate

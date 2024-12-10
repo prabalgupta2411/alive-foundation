@@ -7,6 +7,7 @@ const transactionRoutes = require('./routes/transactionRoutes');
 const bodyParser = require('body-parser');
 const adminRoutes = require('./routes/adminRouter'); // Adjust the path as necessary
 const donorRouter = require('./routes/donorRouter');
+const paymentRoutes = require('./routes/paymentRoutes');
 
 const cors = require('cors');
 
@@ -20,6 +21,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.static('public')); 
 
+app.use('/api/payments', paymentRoutes);
 app.use('/api/patients', patientRoutes);
 app.use('/api/volunteers', volunteerRoutes);
 app.use('/api/transactions', transactionRoutes);
