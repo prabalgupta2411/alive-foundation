@@ -104,7 +104,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-              <div className="relative rounded-lg bg-[#F8FFFF] p-8 shadow-lg sm:p-12">
+              <div className="relative rounded-lg bg-white p-8 shadow-lg sm:p-12">
                 <form>
                   <ContactInputBox
                     type="text"
