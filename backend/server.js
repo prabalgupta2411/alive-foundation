@@ -32,6 +32,10 @@ const testRoutes = require('./routes/testRoutes');
 
 app.use('/api', testRoutes);
 
+app.get("/api/getkey", (req, res) =>
+  res.status(200).json({ key: process.env.RAZORPAY_KEY_ID })
+);
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

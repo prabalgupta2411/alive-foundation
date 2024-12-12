@@ -30,8 +30,9 @@ const DonateForm = () => {
   }, []);
 
   const handlePayment = async (order) => {
+    const { data: { key } } = await axios.get(`${process.env.REACT_APP_API}/api/getkey`)
     const options = {
-      key: process.env.REACT_APP_RAZORPAY_KEY_ID,
+      key,
       amount: order.amount,
       currency: "INR",
       name: "Alive Foundation",
