@@ -3,7 +3,7 @@ import "./marquee.scss";
 
 const Marquee = ({ reviews }) => {
   return (
-    <div className="w-full">
+    <div className="bg-[#F8FFFF] w-full">
       {/* Heading */}
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
@@ -22,7 +22,7 @@ const Marquee = ({ reviews }) => {
           {[...reviews, ...reviews].map((review, index) => (
             <div
               key={index}
-              className="marquee-item flex items-center bg-white shadow-md rounded-lg p-4 min-w-[300px] md:min-w-[400px] space-x-4 mx-11"
+              className="marquee-item flex items-center bg-[#cad9d9] shadow-md rounded-lg p-4 min-w-[300px] md:min-w-[400px] space-x-4 mx-11"
             >
               {/* Image */}
               <div className="flex-shrink-0">
@@ -35,8 +35,8 @@ const Marquee = ({ reviews }) => {
 
               {/* Review Details */}
               <div className="flex flex-col">
-                <h3 className="text-lg font-semibold text-gray-800">{review.name}</h3>
-                <p className="text-sm text-gray-600 mt-1">{review.text}</p>
+                <h3 className="text-lg font-semibold text-black">{review.name}</h3>
+                <p className="text-sm text-black mt-1">{review.text}</p>
               </div>
             </div>
           ))}

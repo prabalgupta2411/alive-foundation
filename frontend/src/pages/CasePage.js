@@ -5,7 +5,7 @@ import Section from '../components/HomePageComp/Section'
 
 function CasePage() {
   return (
-    <div>
+    <div className='bg-[#F8FFFF]'>
         <FullScreenImage
         imageSrc="./assets/cp3.jpg"
         text="Live Cases"

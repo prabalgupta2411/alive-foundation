@@ -21,8 +21,15 @@ module.exports = {
         },
       },
       // Add customizations for colors, spacing, fonts, etc., here if needed
+      colors: {
+        'text': '#131313',
+        'background': '#fafbfb',
+        'primary': '#6a8f9a',
+        'secondary': '#a5c3cb',
+        'accent': '#7ab0c0',
+       }, 
     },
   },
   
-  plugins: [], // Add any plugins (e.g., forms, typography) if required
+  plugins: [], // Add any plugins (e.g., forms, typography  ) if required
 };

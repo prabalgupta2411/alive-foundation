@@ -48,7 +48,7 @@ const CaseCarousel = () => {
   };
 
   return (
-    <div className="carousel-container p-6  rounded-lg mb-10">
+    <div className="p-6  bg-[#F8FFFF] rounded-lg mb-10">
       {isAdminAuthenticated && (
         <div className="flex justify-end mb-4">
           <Link to="/admin/addPatient">

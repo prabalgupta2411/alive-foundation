@@ -22,7 +22,7 @@ const HeroSection = () => {
               SAVE LIVES
             </h1>
             {/* Divider */}
-            <div className="w-16 sm:w-20 md:w-24 h-1 bg-pink-500 mb-6"></div>
+            <div className="w-16 sm:w-20 md:w-24 h-1 bg-[#3b6572] mb-6"></div>
             {/* Description */}
             <p className="text-base sm:text-lg md:text-xl mb-6 leading-relaxed">
               Welcome to the Alive Foundation, where every action we take is dedicated to saving and improving the lives of the vulnerable. Our mission is to provide immediate and effective support to individuals and communities in crisis due to natural disasters, conflicts, and poverty. Through a combination of emergency relief, rehabilitation, and sustainable development projects, we aim to not only save lives but also rebuild them with dignity and hope.
@@ -30,7 +30,7 @@ const HeroSection = () => {
             {/* Donate Button */}
             <Link
               to="/donateNow"
-              className="px-6 py-3 bg-pink-500 hover:bg-pink-600 text-white text-sm sm:text-base md:text-lg font-medium rounded-lg"
+              className="transition-transform transform hover:scale-105 px-6 py-3 bg-[#6a8f9a] hover:bg-[#3b6572] text-white text-sm sm:text-base md:text-lg font-medium rounded-lg"
             >
               Donate Now
             </Link>

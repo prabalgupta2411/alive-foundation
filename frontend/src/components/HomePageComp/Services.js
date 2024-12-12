@@ -3,8 +3,8 @@ import "./style.scss";
 
 const ServicesSection = () => {
   return (
-    <section className="min-h-screen bg-white text-center py-20 px-8 xl:px-0 flex flex-col justify-center">
-      <span className="text-gray-600 text-lg max-w-lg mx-auto mb-2 capitalize flex items-center">
+    <section className="min-h-screen bg-[#f8ffff] text-center py-20 px-8 xl:px-0 flex flex-col justify-center">
+      <span className="text-[#6a8f9a] text-lg max-w-lg mx-auto mb-2 capitalize flex items-center">
         what we're offering
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -12,7 +12,7 @@ const ServicesSection = () => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="text-indigo-600 ml-3 w-6 h-6"
+          className="text-[#6a8f9a] ml-3 w-6 h-6"
         >
           <path
             strokeLinecap="round"
@@ -21,7 +21,7 @@ const ServicesSection = () => {
           />
         </svg>
       </span>
-      <h1 className="text-gray-800 text-4xl md:text-5xl xl:text-6xl font-semibold max-w-3xl mx-auto mb-16 leading-snug">
+      <h1 className="text-[#215c6e] text-4xl md:text-5xl xl:text-6xl font-semibold max-w-3xl mx-auto mb-16 leading-snug">
         Services We Provide to Support Life
       </h1>
       <div className="grid-offer text-left grid sm:grid-cols-2 md:grid-cols-2 gap-5 max-w-5xl mx-auto">

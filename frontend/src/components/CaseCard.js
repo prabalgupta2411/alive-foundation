@@ -49,7 +49,7 @@ const CaseCard = ({ patient }) => {
     <div
       className="flex flex-col max-w-screen-sm sm:max-w-xs md:max-w-xs lg:max-w-xs rounded-xl overflow-hidden shadow-xl bg-white m-4 transition-all duration-300 ease-in-out hover:shadow-2xl"
       style={{
-        backgroundImage: `url('/assets/cp55.svg')`,
+        backgroundImage: `url('/assets/cp16.svg')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -71,7 +71,7 @@ const CaseCard = ({ patient }) => {
           </p>
           <div className="bg-gray-200 rounded-full h-4">
             <div
-              className="bg-blue-600 h-4 rounded-full"
+              className="bg-[#a8c8d2] h-4 rounded-full"
               style={{ width: `${progressPercentage}%` }}
             />
           </div>
@@ -88,12 +88,12 @@ const CaseCard = ({ patient }) => {
       </div>
       <div className="px-4 pt-2 pb-4 flex justify-between items-center">
         <Link to="/donateNow">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-3 rounded-lg transition duration-200">
+          <button className="bg-[#6a8f9a]  text-white font-semibold py-2 px-3 rounded-lg transition-transform transform hover:scale-105">
             Donate
           </button>
         </Link>
         <button
-          className="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-3 rounded-lg transition duration-200"
+          className="bg-[#6a8f9a] text-white font-semibold py-2 px-3 rounded-lg transition-transform transform hover:scale-105"
           onClick={handleViewDetails}
         >
           View Details

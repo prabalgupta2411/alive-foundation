@@ -72,14 +72,14 @@ const ResponsiveCarousel = ({ images }) => {
       </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center p-4 z-10">
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-[#f0f8f8] text-center p-4 z-10">
         <h1 className="text-3xl md:text-5xl font-bold mb-4">Alive Foundation</h1>
         <p className="text-lg md:text-2xl mb-6">
           Lighting the Path to Hope and Happiness
         </p>
         <Link
           to="/donateNow"
-          className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold text-lg transition"
+          className="bg-[#6a8f9a] hover:bg-[#3b6572] text-white px-6 py-3 rounded-xl font-semibold text-lg transition-transform transform hover:scale-105"
         >
           Donate
         </Link>

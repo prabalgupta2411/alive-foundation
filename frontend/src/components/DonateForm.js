@@ -70,7 +70,7 @@ const DonateForm = () => {
         note,
       },
       theme: {
-        color: "#F37254",
+        color: "#3b6572",
       },
     };
 
@@ -126,7 +126,7 @@ const DonateForm = () => {
           placeholder="Enter Donor Name"
           value={donorName}
           onChange={(e) => setDonorName(e.target.value)}
-          className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3b6572]"
         />
       </div>
 
@@ -138,7 +138,7 @@ const DonateForm = () => {
           placeholder="Enter Phone Number"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-          className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3b6572]"
         />
       </div>
 
@@ -150,7 +150,7 @@ const DonateForm = () => {
           placeholder="Enter Email Address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3b6572]"
         />
       </div>
 
@@ -162,7 +162,7 @@ const DonateForm = () => {
           placeholder="Enter PAN Number"
           value={pan}
           onChange={(e) => setPan(e.target.value)}
-          className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3b6572]"
         />
       </div>
 
@@ -174,7 +174,7 @@ const DonateForm = () => {
             id="patientName"
             value={patientName}
             onChange={(e) => setPatientName(e.target.value)}
-            className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3b6572]"
           >
             <option value="">Select Patient</option>
             {patients.map((patient) => (
@@ -191,7 +191,7 @@ const DonateForm = () => {
             id="volunteerName"
             value={volunteerName}
             onChange={(e) => setVolunteerName(e.target.value)}
-            className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3b6572]"
           >
             <option value="">Select Volunteer</option>
             {volunteers.map((volunteer) => (
@@ -210,7 +210,7 @@ const DonateForm = () => {
           placeholder="Enter a note (optional)"
           value={note}
           onChange={(e) => setNote(e.target.value)}
-          className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3b6572]"
         />
       </div>
 
@@ -222,14 +222,14 @@ const DonateForm = () => {
           placeholder="Enter Amount"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
-          className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3b6572]"
           required
         />
       </div>
 
       <button
         type="submit"
-        className="w-full py-3 px-6 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300"
+        className="w-full py-3 px-6 bg-[#6a8f9a] text-white font-semibold rounded-lg hover:bg-[#3b6572] transition duration-300"
       >
         Proceed to Help
       </button>

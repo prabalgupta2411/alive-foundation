@@ -5,7 +5,7 @@ import Section from "../components/HomePageComp/Section";
 
 function BecomeVolunteer() {
   return (
-    <div>
+    <div className="bg-[#F8FFFF]">
       <ParallaxSection />
       <div className="p-4">
         <VolunteerForm />

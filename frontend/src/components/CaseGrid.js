@@ -34,7 +34,7 @@ const CaseGrid = () => {
 
       {/* Container for the grid */}
       <div className="flex flex-col items-center mb-6">
-        <h2 className="text-3xl font-bold text-gray-800 mb-2">Save a Life</h2>
+        <h2 className="text-3xl font-bold text-[#294a54] mb-2">Save a Life</h2>
       </div>
 
       {/* Grid Layout */}

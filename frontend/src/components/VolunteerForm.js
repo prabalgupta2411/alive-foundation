@@ -25,7 +25,7 @@ const VolunteerForm = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-4 sm:p-6 md:p-8 bg-light-gray rounded-lg shadow-lg">
+    <div className="max-w-3xl mx-auto p-4 sm:p-6 md:p-8 bg-white rounded-lg shadow-lg">
       <h2 className="text-2xl sm:text-3xl font-bold text-center text-dark-blue mb-6">
         Become a Volunteer
       </h2>
@@ -41,7 +41,7 @@ const VolunteerForm = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+            className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3b6572]"
             required
           />
         </div>
@@ -57,7 +57,7 @@ const VolunteerForm = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+            className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3b6572]"
             required
           />
         </div>
@@ -73,7 +73,7 @@ const VolunteerForm = () => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+            className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3b6572]"
             required
           />
         </div>
@@ -89,7 +89,7 @@ const VolunteerForm = () => {
             name="city"
             value={formData.city}
             onChange={handleChange}
-            className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+            className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3b6572]"
             required
           />
         </div>
@@ -106,7 +106,7 @@ const VolunteerForm = () => {
               name="dob"
               value={formData.dob}
               onChange={handleChange}
-              className="p-3 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+              className="p-3 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3b6572]"
               required
             />
           </div>
@@ -115,7 +115,7 @@ const VolunteerForm = () => {
           <div className="flex-1">
             <label
               htmlFor="gender"
-              className="text-base sm:text-lg text-dark-blue"
+              className="text-base sm:text-lg"
             >
               Gender*
             </label>
@@ -124,7 +124,7 @@ const VolunteerForm = () => {
               name="gender"
               value={formData.gender}
               onChange={handleChange}
-              className="p-3 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+              className="p-3 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3b6572]"
               required
             >
               <option value="">Select Gender</option>
@@ -145,7 +145,7 @@ const VolunteerForm = () => {
             name="reason"
             value={formData.reason}
             onChange={handleChange}
-            className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+            className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3b6572]"
             required
           ></textarea>
         </div>
@@ -154,7 +154,7 @@ const VolunteerForm = () => {
         <div className="flex justify-center">
           <button
             type="submit"
-            className="bg-orange-500 hover:bg-orange-600 text-white text-base sm:text-lg py-3 px-6 rounded-lg font-semibold transition-transform transform hover:scale-105"
+            className="bg-[#6a8f9a] hover:bg-[#3b6572] text-white text-base sm:text-lg py-3 px-6 rounded-lg font-semibold transition-transform transform hover:scale-105"
           >
             Submit
           </button>
