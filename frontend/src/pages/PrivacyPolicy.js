@@ -36,7 +36,7 @@ const PrivacyPolicy = () => {
           You browse the site anonymously. We do not require you to identify yourself or reveal any personal information when browsing through the Site. However, you may not be able to access certain sections of the Site or interact with us without providing personal information.
         </p>
 
-        <h2 className="text-3xl font-semibold text-black-800 mt-6 mb-4">Use of Personal Information</h2>
+        <h2 className="text-3xl font-semibold text-[#6a8f9a] mt-6 mb-4">Use of Personal Information</h2>
         <p className="mb-6 text-black-700 leading-relaxed">
           ALIVE FOUNDATION will use Personal Information for internal purposes including the following:
         </p>
