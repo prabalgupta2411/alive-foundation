@@ -21,10 +21,7 @@ const RefundCancellationPolicy = () => {
 
         <h2 className="text-3xl font-semibold text-[#6a8f9a] mt-6 mb-4">Cancellation Policy</h2>
         <p className="mb-4 text-black-700 leading-relaxed">
-          If you wish to cancel your support or recurring donation, please contact us at <a href="mailto:info@alivefoundation.org" className="text-[#3b6572] underline">info@alivefoundation.org</a> at least 7 days before your next scheduled donation.
-        </p>
-        <p className="mb-6 text-black-700 leading-relaxed">
-          Cancellations made after this period may result in the processing of the scheduled donation.
+          No cancellations or refunds are allowed for donations made to ALIVE Foundation.
         </p>
 
         <h2 className="text-3xl font-semibold text-[#6a8f9a] mt-6 mb-4">Contact Us</h2>
