@@ -45,7 +45,7 @@ const HomePage = () => {
       <ServicesSection/>
       <ParallaxSection/>
       <CasesCarousel/>
-      <Marquee reviews={reviews} />
+      {/* <Marquee reviews={reviews} /> */}
     </div>
   );
 };
