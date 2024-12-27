@@ -87,7 +87,7 @@ const App = () => {
             />
 
             <Route path="/secretAdmin" element={<AdminLogin />} />
-            <Route path="/secretAdmin/register" element={<AdminRegister />} />
+            {/* <Route path="/secretAdmin/register" element={<AdminRegister />} /> */}
           </Routes>
         </div>
         <Footer className="bottom-0" />
