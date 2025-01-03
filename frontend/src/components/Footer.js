@@ -133,7 +133,7 @@ const Footer = () => {
                   </a>
                 </div>
                 <p className="text-base text-body-color">
-                  &copy; 2024 Alive Foundation
+                  &copy; 2025 Alive Foundation
                 </p>
               </div>
             </div>
