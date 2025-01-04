@@ -8,7 +8,7 @@
 
 /* index.css */
 * {
-  user-select: none; /* Disable text selection for all elements */
+  /* user-select: none; Disable text selection for all elements */
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: 400;
