@@ -76,7 +76,7 @@ router.post('/', upload.fields([{ name: 'image' }, { name: 'pdf' }]), async (req
 // GET route to fetch all patients
 router.get('/all', async (req, res) => {
   try {
-    const patients = await Patient.find();
+    const patients = await Patient.find().sort({ createdAt: -1 });
     res.json(patients);
   } catch (error) {
     res.status(500).json({ message: 'Server Error: Unable to fetch patients' });
