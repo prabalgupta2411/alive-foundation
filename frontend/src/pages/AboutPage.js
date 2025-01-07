@@ -13,8 +13,8 @@ export default function AboutPage() {
             "@context": "https://schema.org",
             "@type": "NonprofitOrganization",
             name: "Alive Foundation",
-            url: "https://www.alivefoundation.in",
-            logo: "https://www.alivefoundation.org/favicon.png",
+            url: "https://www.alivefoundation.org.in",
+            logo: "https://www.alivefoundation.org.in/favicon.png",
             description: "Alive Foundation is dedicated to empowering lives through community support and welfare initiatives.",
             address: {
               "@type": "PostalAddress",

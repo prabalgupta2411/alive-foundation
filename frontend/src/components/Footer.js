@@ -51,7 +51,7 @@ const Footer = () => {
                       </defs>
                     </svg>
                   </span>
-                  <span>+012 (345) 678 99</span>
+                  <span>+91 8810674077</span>
                 </p>
               </div>
             </div>

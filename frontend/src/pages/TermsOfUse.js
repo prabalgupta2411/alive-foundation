@@ -8,7 +8,7 @@ const TermsOfUse = () => {
         <h1 className="text-4xl font-bold text-center text-[#3b6572] mb-6">Terms of Use</h1>
         
         <p className="mb-6 text-gray-700 leading-relaxed">
-          Welcome to <a href="https://www.alivefoundation.in" className="text-[#3b6572] underline" target="_blank" rel="noopener noreferrer">www.alivefoundation.in</a>. If you continue to browse and use this website, you agree to be bound by and are bound by the following terms and conditions of use, which, along with our Privacy Policy, govern your relationship with ALIVE FOUNDATION concerning this website.
+          Welcome to <a href="https://www.alivefoundation.org.in" className="text-[#3b6572] underline" target="_blank" rel="noopener noreferrer">www.alivefoundation.org.in</a>. If you continue to browse and use this website, you agree to be bound by and are bound by the following terms and conditions of use, which, along with our Privacy Policy, govern your relationship with ALIVE FOUNDATION concerning this website.
         </p>
 
         <h2 className="text-3xl font-semibold text-[#6a8f9a] mt-6 mb-4">Terms of Use</h2>

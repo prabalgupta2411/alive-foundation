@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
         <h1 className="text-4xl font-bold text-center text-[#3b6572] mb-6">Privacy Policy</h1>
         
         <p className="mb-6 text-black-700 leading-relaxed">
-          ALIVE FOUNDATION is committed to the ethical collection, retention, and use of information on this site www.alivefoundation.in (‘Site’) that you provide to us about yourself (‘Personal Information’).
+          ALIVE FOUNDATION is committed to the ethical collection, retention, and use of information on this site www.alivefoundation.org.in (‘Site’) that you provide to us about yourself (‘Personal Information’).
         </p>
         
         <h2 className="text-3xl font-semibold text-[#6a8f9a] mt-6 mb-4">Your Personal Information</h2>

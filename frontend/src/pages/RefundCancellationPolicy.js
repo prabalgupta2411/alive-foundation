@@ -16,7 +16,7 @@ const RefundCancellationPolicy = () => {
           All donations made to ALIVE Foundation are non-refundable. By donating, you acknowledge and agree that you are making a voluntary contribution to our organization.
         </p>
         <p className="mb-6 text-black-700 leading-relaxed">
-          In exceptional circumstances, such as duplicate donations or technical errors, requests for refunds may be considered on a case-by-case basis. To request a review of your donation, please contact us at <a href="mailto:info@alivefoundation.org" className="text-[#3b6572] underline">info@alivefoundation.org</a>.
+          In exceptional circumstances, such as duplicate donations or technical errors, requests for refunds may be considered on a case-by-case basis. To request a review of your donation, please contact us at <a href="mailto:info@alivefoundation.org.in" className="text-[#3b6572] underline">info@alivefoundation.org.in</a>.
         </p>
 
         <h2 className="text-3xl font-semibold text-[#6a8f9a] mt-6 mb-4">Cancellation Policy</h2>
@@ -26,7 +26,7 @@ const RefundCancellationPolicy = () => {
 
         <h2 className="text-3xl font-semibold text-[#6a8f9a] mt-6 mb-4">Contact Us</h2>
         <p className="mb-4 text-black-700 leading-relaxed">
-          For any questions regarding our refund and cancellation policy, please reach out to us via email at <a href="mailto:info@alivefoundation.org" className="text-[#3b6572] underline">info@alivefoundation.org</a> or call us at (123) 456-7890.
+          For any questions regarding our refund and cancellation policy, please reach out to us via email at <a href="mailto:info@alivefoundation.org.in" className="text-[#3b6572] underline">info@alivefoundation.org.in</a> or call us at +91 8810674077.
         </p>
 
         <p className="mb-6 text-black-700 leading-relaxed">

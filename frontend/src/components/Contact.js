@@ -72,7 +72,7 @@ const Contact = () => {
                       Phone Number
                     </h4>
                     <p className="text-base text-body-color dark:text-dark-6">
-                      (+91) 6398418095
+                      (+91) 8810674077
                     </p>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ const Contact = () => {
                       Email Address
                     </h4>
                     <p className="text-base text-body-color">
-                      info@alivefoundation.in
+                      info@alivefoundation.org.in
                     </p>
                   </div>
                 </div>

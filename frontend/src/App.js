@@ -41,7 +41,7 @@ const App = () => {
           name="keywords"
           content="Alive Foundation, NGO, community support, welfare initiatives"
         />
-        <link rel="canonical" href="https://www.alivefoundation.in/" />
+        <link rel="canonical" href="https://www.alivefoundation.org.in/" />
       </Helmet>
       <Router>
         <ScrollToTop />
