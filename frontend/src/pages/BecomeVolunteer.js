@@ -11,11 +11,11 @@ function BecomeVolunteer() {
         imageSrc="./assets/cp3.jpg"
         text="Become a Volunteer"
         />
-      <ParallaxSection />
+      <Section />
       <div className="p-4">
         <VolunteerForm />
       </div>
-      <Section />
+      <ParallaxSection />
     </div>
   );
 }
