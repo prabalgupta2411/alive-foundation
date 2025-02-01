@@ -9,9 +9,9 @@ const Contact = () => {
             <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
               <div className="mb-12 max-w-[570px] lg:mb-0">
                 <span className="mb-8 block text-xl text-center font-semibold text-primary md:text-4xl md:text-left">
-                GET IN TOUCH WITH US
+                  GET IN TOUCH WITH US
                 </span>
-                
+
                 <div className="mb-8 flex w-full max-w-[370px]">
                   <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
                     <svg
@@ -71,9 +71,11 @@ const Contact = () => {
                     <h4 className="mb-1 text-xl font-bold text-dark dark:text-black">
                       Phone Number
                     </h4>
-                    <p className="text-base text-body-color dark:text-dark-6">
-                      (+91) 8810674077
-                    </p>
+                    <div className="text-base text-body-color dark:text-dark-6 flex flex-col">
+                      <span>(+91) 8810674077</span>
+                      <span>01204089974</span>
+                    </div>
+
                   </div>
                 </div>
 
